@@ -3,8 +3,8 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>me.CHANGEME</groupId>
-    <artifactId>SlimefunAddon</artifactId>
+    <groupId>me.mnico</groupId>
+    <artifactId>XPandMaterials</artifactId>
     <version>1.0.0</version>
 
     <properties>
@@ -30,6 +30,51 @@
         </repository>
     </repositories>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot-api</artifactId>
+            <version>1.19-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.Slimefun</groupId>
+            <artifactId>Slimefun4</artifactId>
+            <version>RC-37</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.github.mooy1</groupId>
+            <artifactId>InfinityLib</artifactId>
+            <version>f784252486</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.8.2</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.seeseemelk</groupId>
+            <artifactId>MockBukkit-v1.19</artifactId>
+            <version>2.29.0</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
     <build>
         <finalName>${project.name} v${project.version}</finalName>
         <defaultGoal>clean package</defaultGoal>
@@ -46,25 +91,5 @@
         </resources>
     </build>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.spigotmc</groupId>
-            <artifactId>spigot-api</artifactId>
-            <version>1.17.1-R0.1-SNAPSHOT</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.github.Slimefun</groupId>
-            <artifactId>Slimefun4</artifactId>
-            <version>RC-28</version>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>io.github.baked-libs</groupId>
-                    <artifactId>dough-api</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-    </dependencies>
+    
 </project>
